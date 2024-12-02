@@ -28,38 +28,45 @@
 
                         }
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                   
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Title</th>
-                            <th>ButtonUrl</th>
                             <th>ImgPath</th>
+                            <th>ButtonUrl</th>
+                            <th>Title</th>
                             <th>Update</th>
                             <th>Delete</th>
-                            
+
+
+
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>#</th>
-                            <th>Title</th>
-                            <th>ButtonUrl</th>
                             <th>ImgPath</th>
+                            <th>ButtonUrl</th>
+                            <th>Title</th>
                             <th>Update</th>
                             <th>Delete</th>
+
+
+
                         </tr>
                     </tfoot>
                     <tbody>
                         @foreach(SliderItem item in Model)
                         {
-                        <tr>
-                            <td>@item.Id</td>
-                            <td>@item.Title</td>
-                            <td>@item.ButtonUrl</td>
-                            <td>@item.ImgPath</td>
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.ImgPath</td>
+                                <td>@item.ButtonUrl</td>
+                                <td>@item.Title</td>
                                 <th><a class="btn btn-success" href="#">Update</a></th>
-                                <th><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger" >Delete</a></th>
-                        </tr>
+                                <th><a  class="btn btn-danger">Delete</a></th>
+                            </tr>
+                       
                         }
                         
                     </tbody>

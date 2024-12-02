@@ -35,7 +35,6 @@ namespace UniqloProject.Areas.Admin.Controllers
         }
         public IActionResult Create()
         {
-
             return View();
         }
         [HttpPost]
