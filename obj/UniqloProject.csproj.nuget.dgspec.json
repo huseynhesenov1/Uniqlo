@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\II Novbe\\Desktop\\New folder (2)\\Uniqlo\\UniqloProject.csproj": {}
+    "C:\\Users\\ACER\\Desktop\\Uniqlo\\UniqloProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\II Novbe\\Desktop\\New folder (2)\\Uniqlo\\UniqloProject.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Uniqlo\\UniqloProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\II Novbe\\Desktop\\New folder (2)\\Uniqlo\\UniqloProject.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Uniqlo\\UniqloProject.csproj",
         "projectName": "UniqloProject",
-        "projectPath": "C:\\Users\\II Novbe\\Desktop\\New folder (2)\\Uniqlo\\UniqloProject.csproj",
-        "packagesPath": "C:\\Users\\II Novbe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\II Novbe\\Desktop\\New folder (2)\\Uniqlo\\obj\\",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Uniqlo\\UniqloProject.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Uniqlo\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\II Novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

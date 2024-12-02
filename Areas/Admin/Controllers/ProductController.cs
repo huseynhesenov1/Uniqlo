@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using UniqloProject.DAL;
 using UniqloProject.Models;
+using UniqloProject.ViewModels;
 
 namespace UniqloProject.Areas.Admin.Controllers;
 [Area("Admin")]
@@ -28,5 +30,31 @@ public class ProductController : Controller
         product.IsDelete = true;
         _context.SaveChanges();
         return RedirectToAction(nameof(Index));
+    }
+    public IActionResult Create()
+    {
+        ViewBag.Catagories = new SelectList(_context.Catagories, "Id", "Name");
+
+        return View();
+    }
+    [HttpPost]
+    public IActionResult Create(ProductVM productVM)
+    {
+        if (ModelState.IsValid)
+        {
+            Product product = new Product()
+            {
+                Title = productVM.Title,
+                ImgUrl = productVM.ImgUrl,
+                Price = productVM.Price,
+                NewPrice = productVM.NewPrice,
+                CatagoryId = productVM.CatagoryId,
+            };
+            _context.Products.Add(product);
+            _context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
+        ViewBag.Catagories = new SelectList(_context.Catagories, "Id", "Name");
+        return View(productVM);
     }
 }
