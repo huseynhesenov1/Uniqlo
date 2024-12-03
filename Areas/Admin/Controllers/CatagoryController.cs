@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using UniqloProject.DAL;
 using UniqloProject.Models;
 using UniqloProject.ViewModels;
@@ -54,28 +55,30 @@ public class CatagoryController : Controller
         return View(catagoryVM);
     }
 
-   /* public IActionResult Update(int Id)
+    public IActionResult Update(int Id)
     {
         Catagory? catagory =  _context.Catagories.Find(Id);
         if (catagory == null)
         {
             return NotFound("bele deyer tapilmadu");
         }
-        CatagoryVM catagoryVM = new CatagoryVM()
-        {
-            Name= catagory.Name
-        };
-        return View(catagoryVM);
+        //CatagoryVM catagoryVM = new CatagoryVM()
+        //{
+        //    Name= catagory.Name
+        //};
+        return View(catagory);
     }
     [HttpPost]
-    public IActionResult Update(CatagoryVM catagoryVM)
+    public IActionResult Update(Catagory catagory)
     {
-        if (!ModelState.IsValid)
+        Catagory? updateCatagory = _context.Catagories.AsNoTracking().FirstOrDefault(x => x.Id == catagory.Id);
+        if (updateCatagory == null)
         {
-            return View(catagoryVM);
+            return NotFound("No Such Service");
         }
-
-        return View();
-    }*/
+        _context.Catagories.Update(catagory);
+        _context.SaveChanges();
+        return RedirectToAction(nameof(Index));
+    }
 
 }
