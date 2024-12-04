@@ -19,7 +19,7 @@ public class CatagoryController : Controller
     {
         List<Catagory> catagories = _context.Catagories.ToList();
         return View(catagories);
-       
+
     }
     public IActionResult Delete(int Id)
     {
@@ -57,7 +57,7 @@ public class CatagoryController : Controller
 
     public IActionResult Update(int Id)
     {
-        Catagory? catagory =  _context.Catagories.Find(Id);
+        Catagory? catagory = _context.Catagories.Find(Id);
         if (catagory == null)
         {
             return NotFound("bele deyer tapilmadu");
@@ -67,7 +67,7 @@ public class CatagoryController : Controller
         //    Name= catagory.Name
         //};
         return View(catagory);
-    }
+    } 
     [HttpPost]
     public IActionResult Update(Catagory catagory)
     {
